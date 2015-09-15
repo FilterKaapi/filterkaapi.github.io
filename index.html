@@ -15,6 +15,12 @@ title: Home
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
     {{ post.content }}
+    <br>
+    If you liked this post, you can
+    <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ post.url }}&text={{ post.title }}&via=sanlaxman"
+       target="_blank">
+      share it with your followers</a>
+    <br>
   </div>
   {% endfor %}
 </div>
