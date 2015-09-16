@@ -4,6 +4,9 @@ title: "Forming Habits"
 comments: true
 permalink: "forming-habits"
 ---
+
+![Habit Signs](http://www.bodyforwife.com/wp-content/uploads/2015/02/habits.jpg)
+
 ## The 21-day myth
 
 Forming *good* habits is definitely one of the toughest tasks to complete. [Research](http://www.today.com/health/think-itll-take-21-days-make-your-resolution-habit-try-2D11826051) indicates that forming a habit can take anywhere from 18 days to 254 days.
