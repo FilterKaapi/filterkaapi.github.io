@@ -5,7 +5,7 @@ comments: true
 permalink: "fighting-low-moods"
 ---
 
-![Moods](/_images/moods.jpg)
+![Moods](/images/moods.jpg)
 
 
 ## What do you do when you feel low?
