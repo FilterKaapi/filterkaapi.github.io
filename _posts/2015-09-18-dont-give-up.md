@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Don't Give Up1"
+title: "Don't Give Up!"
 comments: true
 permalink: "dont-give-up"
 ---
