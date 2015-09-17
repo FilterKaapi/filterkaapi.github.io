@@ -16,6 +16,8 @@ This question has troubled me for several years now. I am still quite not sure w
 
 There is no single reason why we feel low. Science hasn't found an answer yet. It probably has something to do with the level of serotonin in our body. But we aren't sure yet. What we do know is that Serotonin helps alleviate our mood. For this reason it is used in anti-depressants. This [awesome video](https://www.youtube.com/watch?v=GOK1tKFFIQI) by ASAP Science explains the science behind depression very well.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GOK1tKFFIQI" frameborder="0" allowfullscreen></iframe>
+
 ## What can I do to make myself feel better?
 
 I have noticed that a few things work. I have listed 3 of them here.
