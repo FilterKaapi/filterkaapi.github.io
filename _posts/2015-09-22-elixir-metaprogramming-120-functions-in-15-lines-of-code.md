@@ -28,6 +28,7 @@ Metaprogramming is the process of writing a program that writes programs. Elixir
 ## Sample Program: An elixir wrapper for Pandoc
 
 Pandoc is an haskell based library that allows you to convert documents in the combination of formats. It's a swiss army knife of document conversion. We want to create an Elixir program that will allow us to convert a file from one format to another using a syntax like:
+
 ```elixir
 markdown_to_html "sample.md"
 ```
@@ -43,6 +44,7 @@ Install Pandoc for your operating system with instructions given [here](http://p
 Pandoc expects a file as an input. Let's make a simple markdown file `sample.md` with the following content for testing purposes:
 
 **sample.md**
+
 ```markdown
 
 # title
@@ -79,10 +81,13 @@ This will give you the following output:
 ## Step 3: Create `pandoc_wrapper.exs`
 
 The `System.cmd` function in elixir allows you to run bash commands from your elixir program or console. Thus in order to run `pandoc sample.md --from=markdown --to=html` from our elixir program we call the function as
+
 ```elixir
 System.cmd "pandoc", ["sample.md", "--from=markdown", "--to=html"]
 ```
+
 This will give the following output:
+
 ```elixir
 {"<h1 id=\"title\">title</h1>\n<h1 id=\"chapter\">Chapter</h1>\n<h2 id=\"list\">list</h2>\n<ul>\n<li>one</li>\n<li>two</li>\n<li>three</li>\n</ul>\n", 0}
 ```
@@ -121,11 +126,13 @@ def markdown_to_html(file) do
   {:ok, output}
 end
 ```  
+
 There are currently 6 reader formats and 21 writer formats. This implies that have a total of 126 possible combination of conversions. To write custom functions for each of them is extremely time consuming. Let's use metaprogramming to reduce our workload.
 
 Firstly, let's store the input and output formats in two lists name `@readers` and `@writers` respectively.
 
 **pandoc_wrapper.exs**
+
 ```elixir
 defmodule Pandoc.Wrapper do
   @readers ["markdown", "json", "rst", "textile", "html", "latex"]
@@ -159,6 +166,7 @@ end
 ## Step 5: Putting it all together
 
 **pandoc_wrapper.exs**
+
 ```elixir
 defmodule Pandoc.Wrapper do
   @readers ["markdown", "json", "rst", "textile", "html", "latex"]
@@ -188,6 +196,7 @@ iex> import Pandoc.Wrapper
 iex> markdown_to_html "sample.md"
 {:ok, "<h1 id=\"title\">title</h1>\n<h1 id=\"chapter\">Chapter</h1>\n<h2 id=\"list\">list</h2>\n<ul>\n<li>one</li>\n<li>two</li>\n<li>three</li>\n</ul>\n"}
 ```
+
 It works!
 
 ## Conclusion
