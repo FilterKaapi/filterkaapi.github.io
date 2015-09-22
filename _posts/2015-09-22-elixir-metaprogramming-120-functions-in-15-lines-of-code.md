@@ -45,7 +45,7 @@ Pandoc expects a file as an input. Let's make a simple markdown file `sample.md`
 
 **sample.md**
 
-```md
+```
 
 # title
 
