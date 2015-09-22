@@ -45,13 +45,13 @@ Pandoc expects a file as an input. Let's make a simple markdown file `sample.md`
 
 **sample.md**
 
-```markdown
+```md
 
 # title
 
-# Chapter
+## Chapter
 
-## list
+### list
 
 - one
 - two
@@ -69,8 +69,8 @@ This will give you the following output:
 
 ```html
 <h1 id="title">title</h1>
-<h1 id="chapter">Chapter</h1>
-<h2 id="list">list</h2>
+<h2 id="chapter">Chapter</h1>
+<h3 id="list">list</h2>
 <ul>
   <li>one</li>
   <li>two</li>
@@ -89,7 +89,7 @@ System.cmd "pandoc", ["sample.md", "--from=markdown", "--to=html"]
 This will give the following output:
 
 ```elixir
-{"<h1 id=\"title\">title</h1>\n<h1 id=\"chapter\">Chapter</h1>\n<h2 id=\"list\">list</h2>\n<ul>\n<li>one</li>\n<li>two</li>\n<li>three</li>\n</ul>\n", 0}
+{"<h1 id=\"title\">title</h1>\n<h2 id=\"chapter\">Chapter</h2>\n<h3 id=\"list\">list</h3>\n<ul>\n<li>one</li>\n<li>two</li>\n<li>three</li>\n</ul>\n", 0}
 ```
 
 Which is a tuple of the form `{output,0}`. We can thus pattern match the output as follows:
@@ -194,7 +194,7 @@ Let's open an interactive elixir shell with `iex` in terminal.
 ```elixir
 iex> import Pandoc.Wrapper
 iex> markdown_to_html "sample.md"
-{:ok, "<h1 id=\"title\">title</h1>\n<h1 id=\"chapter\">Chapter</h1>\n<h2 id=\"list\">list</h2>\n<ul>\n<li>one</li>\n<li>two</li>\n<li>three</li>\n</ul>\n"}
+{:ok, "<h1 id=\"title\">title</h1>\n<h2 id=\"chapter\">Chapter</h2>\n<h3 id=\"list\">list</h3>\n<ul>\n<li>one</li>\n<li>two</li>\n<li>three</li>\n</ul>\n"}
 ```
 
 It works!
