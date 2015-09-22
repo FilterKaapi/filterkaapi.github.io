@@ -104,7 +104,7 @@ Let's now get put all this together in an elixir program. In your code folder cr
 
 ```elixir
 defmodule Pandoc.Wrapper do
-  def convert(file, from \\ "markdown", to \\ "html ) do
+  def convert(file, from \\ "markdown", to \\ "html" ) do
     {output,_} = System.cmd "pandoc", [file , "--from=#{from}" , "--to=#{to}"]
   end
 end
